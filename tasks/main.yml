@@ -1,0 +1,6 @@
+---
+- name: install ntp
+  yum: pkg=ntp state=latest update_cache=yes
+
+- name: make sure ntp is running
+  service: name=ntp state=started enabled=yes

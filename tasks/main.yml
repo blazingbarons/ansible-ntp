@@ -1,6 +1,9 @@
 ---
-- name: install ntp
-  yum: pkg=ntp state=latest update_cache=yes
+- include: setup-debian.yml
+  when: ansible_os_family == 'Debian'
+
+- include: setup-redhat.yml
+  when: ansible_os_family == 'RedHat'
 
 - name: make sure ntp is running
   service: name=ntp state=started enabled=yes

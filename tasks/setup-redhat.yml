@@ -1,0 +1,5 @@
+---
+- name: install ntp
+  yum: pkg={{ item }} state=present
+  with_items:
+    - ntp

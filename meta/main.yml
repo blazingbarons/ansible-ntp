@@ -13,6 +13,11 @@ galaxy_info:
     - name: Debian
       versions:
         - jessie
+    - name: EL
+      versions:
+        - 6
+        - 7
   galaxy_tags:
     - system
+    - ntp
 dependencies: []
